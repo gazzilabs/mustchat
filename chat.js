@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 var numUsers=0;
 var usernames=[];
-io.on('connection', (socket) => {
+io.on('connection', function (socket) {
     console.log("connection")
     var addedUser = false;
     socket.on('join', function (username) {
